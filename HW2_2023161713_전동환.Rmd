@@ -1,0 +1,83 @@
+---
+title: "HW2_2023161713"
+author: "Dong Hwan Jeon"
+date: "2024-03-13"
+output: html_document
+---
+
+```{r setup, include=TRUE, echo=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 예제 1
+```{r ex1}
+print(sqrt(2))  
+print(exp(5))  
+print(log10(20))  
+print(log(20))  
+print(gamma(5))  
+print(abs(-4.5))  
+print(round(pi, digits = 2))
+```
+## 예제 2
+```{r ex2, include=TRUE, echo=TRUE}
+print(dnorm(5, mean = 5, sd = 1))  
+print(dexp(1,rate = 5))  
+print(dweibull(50,shape = 80,scale = 1.5))
+```
+
+## 예제 3
+```{r ex3, include=TRUE, echo=TRUE}
+A=5;b=6
+print(2*A+b^2)
+rm(list=ls())
+A=5;b=6
+(A**5) * (3**b)
+```
+
+## 예제 4
+```{r ex4, include=TRUE, echo=TRUE}
+norm_10 <- function(x,mu,sig){
+  return(10*dnorm(x=x, mean = mu,sd = sig))
+}
+dnorm(1,1,1)
+norm_10(1,1,1)
+```
+
+## 예제 5
+```{r ex5, include=TRUE, echo=TRUE}
+print(sum(1:10^2))
+print(prod(1:10))
+print(sum(seq(cos(pi/20),cos(pi),length=20)))
+```
+
+## 예제 6
+```{r ex6, include=TRUE, echo=TRUE}
+mat <- matrix(seq(2,18,by=2), ncol = 3, nrow = 3,byrow = T)
+row.names(mat) <- c("A","B","C")
+colnames(mat) <- c("가","나","다")
+mat[2,3]
+```
+## 예제 7
+
+```{r ex7, include=TRUE, echo=TRUE}
+iris[iris$Species=="virginica",]
+```
+
+##예제 8
+```{r ex8, include=TRUE, echo=TRUE}
+a <- c(iris[,3]);b <- c(iris$Species)
+list1 <- list(a,b)
+list1
+```
+
+## 예제 9
+```{r ex9, include=TRUE, echo=TRUE}
+find_species<- function(data){
+  for(i in 1:dim(data)[1]){
+    ifelse(data[i,"Species"]=="setosa",print(1), ifelse(data[i,"Species"]=='versicolor',print(2),print(3)))
+  }
+}
+find_species(iris)
+```
+
