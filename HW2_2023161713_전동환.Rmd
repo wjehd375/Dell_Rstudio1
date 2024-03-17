@@ -64,7 +64,7 @@ mat[2,3]
 iris[iris$Species=="virginica",]
 ```
 
-##예제 8
+## 예제 8
 ```{r ex8, include=TRUE, echo=TRUE}
 a <- c(iris[,3]);b <- c(iris$Species)
 list1 <- list(a,b)
